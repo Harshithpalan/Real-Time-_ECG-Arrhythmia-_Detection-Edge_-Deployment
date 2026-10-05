@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#0f131d;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-container-low": "#171b26", "on-error-container": "#ffdad6", "on-tertiary-fixed-variant": "#005236", "inverse-primary": "#00696f", "surface-tint": "#00dce6", "primary": "#e0fdff", "primary-fixed-dim": "#00dce6", "surface": "#0f131d", "surface-container": "#1c1f2a", "on-surface": "#dfe2f1", "on-secondary-fixed": "#001f26", "surface-variant": "#313540", "secondary-fixed": "#acedff", "background": "#0f131d", "outline-variant": "#3a494b", "on-secondary-fixed-variant": "#004e5c", "on-secondary": "#003640", "on-surface-variant": "#b9cacb", "error": "#ffb4ab", "on-background": "#dfe2f1", "surface-dim": "#0f131d", "on-tertiary-container": "#006e4b", "secondary-fixed-dim": "#4cd7f6", "on-secondary-container": "#00424e", "tertiary-container": "#67f4b7", "outline": "#849495", "error-container": "#93000a", "on-tertiary": "#003824", "on-primary-fixed-variant": "#004f53", "on-primary": "#00373a", "on-error": "#690005", "primary-container": "#00f2fe", "secondary": "#4cd7f6", "on-primary-fixed": "#002022", "inverse-on-surface": "#2c303b", "on-tertiary-fixed": "#002113", "tertiary-fixed": "#6ffbbe", "secondary-container": "#03b5d3", "surface-container-highest": "#313540", "inverse-surface": "#dfe2f1", "tertiary": "#e1ffec", "surface-container-lowest": "#0a0e18", "surface-container-high": "#262a35", "on-primary-container": "#006a70", "surface-bright": "#353944", "tertiary-fixed-dim": "#4edea3", "primary-fixed": "#6ff6ff" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "gutter": "1rem", "space-md": "1rem", "space-lg": "1.5rem", "margin-tablet": "1.5rem", "margin-desktop": "2rem", "space-sm": "0.5rem", "gutter-desktop": "1.5rem", "space-xs": "0.25rem", "space-xl": "2.5rem", "margin": "1rem" }, "fontFamily": { "label-micro": ["JetBrains Mono"], "body-sm": ["Inter"], "headline-md": ["Inter"], "headline-lg-mobile": ["Inter"], "headline-xl-mobile": ["Inter"], "label-telemetry-md": ["JetBrains Mono"], "label-telemetry-lg": ["JetBrains Mono"], "body-md": ["Inter"], "body-lg": ["Inter"], "label-telemetry-sm": ["JetBrains Mono"], "headline-lg": ["Inter"], "headline-xl": ["Inter"] }, "fontSize": { "label-micro": ["0.625rem", { "lineHeight": "0.75rem", "letterSpacing": "0.05em", "fontWeight": "600" }], "body-sm": ["0.75rem", { "lineHeight": "1.125rem", "fontWeight": "400" }], "headline-md": ["1.25rem", { "lineHeight": "1.75rem", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-lg-mobile": ["1.5rem", { "lineHeight": "2rem", "letterSpacing": "-0.015em", "fontWeight": "600" }], "headline-xl-mobile": ["2rem", { "lineHeight": "2.5rem", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-telemetry-md": ["0.875rem", { "lineHeight": "1.25rem", "letterSpacing": "0em", "fontWeight": "500" }], "label-telemetry-lg": ["1.25rem", { "lineHeight": "1.5rem", "letterSpacing": "-0.02em", "fontWeight": "600" }], "body-md": ["0.875rem", { "lineHeight": "1.375rem", "fontWeight": "400" }], "body-lg": ["1.125rem", { "lineHeight": "1.75rem", "fontWeight": "400" }], "label-telemetry-sm": ["0.75rem", { "lineHeight": "1rem", "letterSpacing": "0.025em", "fontWeight": "500" }], "headline-lg": ["2rem", { "lineHeight": "2.5rem", "letterSpacing": "-0.02em", "fontWeight": "600" }], "headline-xl": ["3rem", { "lineHeight": "3.5rem", "letterSpacing": "-0.025em", "fontWeight": "700" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 inset-x-0 z-50 bg-surface/90 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,0,0,0.4)]"><div class="h-28 flex flex-col justify-between px-space-md py-space-xs"><div class="flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><img alt="ECG Edge Logo" class="h-8 w-auto object-contain shrink-0" src="https://lh3.googleusercontent.com/aida/AEtjO1U4r4RdEixPi4A-0JUimamiCSHLgm2VZwJFx9pLg5QMxcMXPoBLqGF_EmVXIzvBflyyPq-375CmyAVk6xe7mTOv0npXDJFxVlPvY3_yEJFTsgNMFBtGYbBG-j6CL2ZZfRCOW2WKpS0M8YYaGKkrrKUajmhfoT-vLGGn9vMLBRjJL6Kul1HtUbR_ilFJySOaCb5YWW4NgznWu12rw2tC-i2BB1azYh7fWISEE17fepb8ip943I02aDEW5gI"/><div class="flex flex-col min-w-0"><div class="flex items-center gap-space-xs"><span class="font-headline-md text-headline-md tracking-tight text-primary truncate">ECG Edge Monitor</span><span class="px-space-xs py-0.5 rounded-DEFAULT bg-surface-container-highest text-outline text-[9px] font-label-micro uppercase tracking-wider shrink-0">NON-CLINICAL</span></div><span class="font-label-telemetry-sm text-label-telemetry-sm text-on-surface-variant truncate">Overview</span></div></div><div class="flex items-center gap-space-xs shrink-0"><button aria-label="Telemetry Stream State" class="w-11 h-11 flex items-center justify-center rounded-DEFAULT text-secondary hover:text-primary-container transition-colors"><span class="material-symbols-outlined text-[20px]">pause_circle</span></button><button aria-label="Arrhythmia Alerts" class="w-11 h-11 flex items-center justify-center rounded-DEFAULT text-on-surface-variant hover:text-error transition-colors"><span class="material-symbols-outlined text-[20px]">notifications</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div><div class="flex items-center justify-between gap-space-sm pt-space-xs overflow-hidden"><div class="flex items-center gap-space-xs px-space-sm py-0.5 rounded-DEFAULT bg-surface-container-low shrink-0"><span class="w-1.5 h-1.5 rounded-full bg-tertiary-container animate-pulse"></span><span class="font-label-micro text-label-micro text-tertiary-container tracking-wider uppercase">ONLINE - TFLite FP16</span></div><nav class="flex items-center gap-space-xs overflow-x-auto no-scrollbar py-0.5" data-active-classes="text-primary-container bg-surface-container-high"><a aria-current="page" class="px-space-sm py-0.5 rounded-DEFAULT font-label-telemetry-sm whitespace-nowrap text-primary-container bg-surface-container-high" data-path="overview" href="#">Overview</a><a class="px-space-sm py-0.5 rounded-DEFAULT font-label-telemetry-sm text-label-telemetry-sm text-on-surface-variant whitespace-nowrap" data-path="live-ecg" href="#">Live ECG</a><a class="px-space-sm py-0.5 rounded-DEFAULT font-label-telemetry-sm text-label-telemetry-sm text-on-surface-variant whitespace-nowrap" data-path="arrhythmia" href="#">Arrhythmia</a><a class="px-space-sm py-0.5 rounded-DEFAULT font-label-telemetry-sm text-label-telemetry-sm text-on-surface-variant whitespace-nowrap" data-path="edge-tflite" href="#">Edge</a><a class="px-space-sm py-0.5 rounded-DEFAULT font-label-telemetry-sm text-label-telemetry-sm text-on-surface-variant whitespace-nowrap" data-path="alerts" href="#">Alerts</a><a class="px-space-sm py-0.5 rounded-DEFAULT font-label-telemetry-sm text-label-telemetry-sm text-on-surface-variant whitespace-nowrap" data-path="system-telemetry" href="#">System</a><a class="px-space-sm py-0.5 rounded-DEFAULT font-label-telemetry-sm text-label-telemetry-sm text-on-surface-variant whitespace-nowrap" data-path="dataset-registry" href="#">Dataset</a><a class="px-space-sm py-0.5 rounded-DEFAULT font-label-telemetry-sm text-label-telemetry-sm text-on-surface-variant whitespace-nowrap" data-path="model-benchmark" href="#">Model</a></nav></div></div></header><main class="flex flex-col relative w-full pt-28 pb-28 bg-surface"><div class="flex flex-col w-full px-space-md py-space-sm gap-space-md">
+<!-- Header Subtitle Context -->
+<div class="flex flex-col gap-0.5">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-secondary-fixed animate-ping"></span>
+<span class="font-label-micro text-label-micro text-secondary-fixed tracking-wider uppercase">Edge Inference Active</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">AI-powered ECG monitoring with edge inference and automated alerting.</p>
+</div>
+<!-- Hardware & Model Telemetry Ribbon -->
+<div class="flex items-center gap-space-xs overflow-x-auto no-scrollbar -mx-space-md px-space-md py-0.5">
+<div class="flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container-low shrink-0">
+<span class="material-symbols-outlined text-secondary-fixed text-[14px]">sensors</span>
+<span class="font-label-micro text-label-micro text-on-surface-variant">ECG:</span>
+<span class="font-label-telemetry-sm text-label-telemetry-sm text-primary">Connected (AD8232)</span>
+</div>
+<div class="flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container-low shrink-0">
+<span class="material-symbols-outlined text-tertiary-fixed text-[14px]">psychology</span>
+<span class="font-label-micro text-label-micro text-on-surface-variant">MODEL:</span>
+<span class="font-label-telemetry-sm text-label-telemetry-sm text-primary">CNN-LSTM (87,588)</span>
+</div>
+<div class="flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container-low shrink-0">
+<span class="material-symbols-outlined text-primary-fixed-dim text-[14px]">memory</span>
+<span class="font-label-micro text-label-micro text-on-surface-variant">RUN:</span>
+<span class="font-label-telemetry-sm text-label-telemetry-sm text-primary">TFLite Float16</span>
+</div>
+<div class="flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container-low shrink-0">
+<span class="material-symbols-outlined text-tertiary-container text-[14px]">bolt</span>
+<span class="font-label-micro text-label-micro text-on-surface-variant">LATENCY:</span>
+<span class="font-label-telemetry-sm text-label-telemetry-sm text-tertiary-fixed">0.508ms (743x)</span>
+</div>
+<div class="flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container-low shrink-0">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-container"></span>
+<span class="font-label-telemetry-sm text-label-telemetry-sm text-tertiary">Online / Real-time</span>
+</div>
+</div>
+<!-- KPI Bento Deck -->
+<div class="grid grid-cols-2 gap-space-sm">
+<!-- Heart Rate KPI -->
+<div class="flex flex-col justify-between p-space-sm rounded bg-surface-container-low">
+<div class="flex items-center justify-between">
+<span class="font-label-micro text-label-micro text-on-surface-variant uppercase tracking-wider">Heart Rate</span>
+<span class="material-symbols-outlined text-error text-[18px]" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</div>
+<div class="flex items-baseline gap-space-xs my-1">
+<span class="font-headline-xl-mobile text-headline-xl-mobile text-primary tracking-tight font-bold" id="bpm-val">72</span>
+<span class="font-label-telemetry-sm text-label-telemetry-sm text-on-surface-variant">BPM</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-container"></span>
+<span class="font-label-micro text-label-micro text-tertiary truncate">Normal Sinus</span>
+</div>
+</div>
+<!-- Prediction KPI -->
+<div class="flex flex-col justify-between p-space-sm rounded bg-surface-container-low">
+<div class="flex items-center justify-between">
+<span class="font-label-micro text-label-micro text-on-surface-variant uppercase tracking-wider">Edge Inference</span>
+<span class="material-symbols-outlined text-primary-container text-[18px]">neurology</span>
+</div>
+<div class="flex items-baseline gap-space-xs my-1">
+<span class="font-headline-xl-mobile text-headline-xl-mobile text-primary-container font-bold" id="pred-class-val">N</span>
+<span class="font-label-telemetry-md text-label-telemetry-md text-tertiary-fixed" id="pred-conf-val">98.4%</span>
+</div>
+<span class="font-label-micro text-label-micro text-on-surface-variant truncate">Normal Rhythm (Lead II)</span>
+</div>
+<!-- Alert Frequency KPI -->
+<div class="flex flex-col justify-between p-space-sm rounded bg-surface-container-low">
+<div class="flex items-center justify-between">
+<span class="font-label-micro text-label-micro text-on-surface-variant uppercase tracking-wider">Alerts Today</span>
+<span class="material-symbols-outlined text-error text-[18px]">warning</span>
+</div>
+<div class="flex items-baseline gap-space-xs my-1">
+<span class="font-headline-xl-mobile text-headline-xl-mobile text-error font-bold">2</span>
+<span class="font-label-telemetry-sm text-label-telemetry-sm text-error">Events</span>
+</div>
+<span class="font-label-micro text-label-micro text-on-error-container truncate">Ventricular Ectopy</span>
+</div>
+<!-- Signal Quality & Stream KPI -->
+<div class="flex flex-col justify-between p-space-sm rounded bg-surface-container-low">
+<div class="flex items-center justify-between">
+<span class="font-label-micro text-label-micro text-on-surface-variant uppercase tracking-wider">SNR / Processing</span>
+<span class="material-symbols-outlined text-secondary-fixed text-[18px]">equalizer</span>
+</div>
+<div class="flex items-baseline gap-space-xs my-1">
+<span class="font-label-telemetry-lg text-label-telemetry-lg text-primary font-bold">13.71</span>
+<span class="font-label-micro text-label-micro text-on-surface-variant">dB (Fair)</span>
+</div>
+<span class="font-label-micro text-label-micro text-on-surface-variant truncate">25.1k spl / 99 beats</span>
+</div>
+</div>
+<!-- Central Waveform Instrument -->
+<div class="flex flex-col rounded bg-surface-container-lowest overflow-hidden">
+<!-- Viewport Header Bar -->
+<div class="flex items-center justify-between px-space-sm py-2 bg-surface-container">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[16px]">show_chart</span>
+<span class="font-label-telemetry-sm text-label-telemetry-sm text-primary uppercase">Lead II Waveform</span>
+<span class="px-1 py-0.5 rounded bg-surface-container-highest font-label-micro text-label-micro text-outline">250 SPS</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-micro text-label-micro text-secondary-fixed-dim">25mm/s</span>
+<span class="font-label-micro text-label-micro text-outline">|</span>
+<span class="font-label-micro text-label-micro text-secondary-fixed-dim">10mm/mV</span>
+</div>
+</div>
+<!-- ECG Visualizer Screen -->
+<div class="relative w-full h-52 bg-surface-container-lowest overflow-hidden select-none">
+<!-- Reticle Grid Matrix (Simulated ECG Calibrated Paper) -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<pattern height="8" id="smallGrid" patternunits="userSpaceOnUse" width="8">
+<path d="M 8 0 L 0 0 0 8" fill="none" stroke="rgba(0, 220, 230, 0.05)" stroke-width="0.5"></path>
+</pattern>
+<pattern height="40" id="grid" patternunits="userSpaceOnUse" width="40">
+<rect fill="url(#smallGrid)" height="40" width="40"></rect>
+<path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(0, 220, 230, 0.15)" stroke-width="0.8"></path>
+</pattern>
+<filter height="140%" id="glow" width="140%" x="-20%" y="-20%">
+<fedropshadow dx="0" dy="0" flood-color="#00f2fe" flood-opacity="0.8" stddeviation="2.5"></fedropshadow>
+</filter>
+<filter height="140%" id="alertGlow" width="140%" x="-20%" y="-20%">
+<fedropshadow dx="0" dy="0" flood-color="#ffb4ab" flood-opacity="0.9" stddeviation="3"></fedropshadow>
+</filter>
+</defs>
+<rect fill="url(#grid)" height="100%" width="100%"></rect>
+</svg>
+<!-- Active Running ECG Trace Canvas -->
+<svg class="absolute inset-0 w-full h-full" preserveaspectratio="none" viewbox="0 0 380 208">
+<!-- Lead II Synthetic ECG Waveform Line -->
+<path d="M 0 108 L 25 108 Q 32 108 36 102 Q 40 96 44 108 L 52 108 L 57 114 L 64 26 L 71 138 L 76 108 L 84 108 Q 94 108 102 96 Q 110 84 120 108 L 145 108 Q 152 108 156 102 Q 160 96 164 108 L 172 108 L 177 114 L 184 26 L 191 138 L 196 108 L 204 108 Q 214 108 222 96 Q 230 84 240 108 L 265 108 Q 272 108 276 102 Q 280 96 284 108 L 292 108 L 297 114 L 304 26 L 311 138 L 316 108 L 324 108 Q 334 108 342 96 Q 350 84 360 108 L 380 108" fill="none" filter="url(#glow)" id="ecg-path" stroke="#00f2fe" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2"></path>
+<!-- Real-time Beat Bracket Segmentation Marker (80 samples inference window) -->
+<rect fill="rgba(0, 242, 254, 0.04)" height="152" rx="2" stroke="none" width="70" x="150" y="16"></rect>
+<line stroke="#4cd7f6" stroke-width="1.5" x1="150" x2="160" y1="16" y2="16"></line>
+<line stroke="#4cd7f6" stroke-width="1.5" x1="150" x2="160" y1="168" y2="168"></line>
+<line stroke="#4cd7f6" stroke-width="1.5" x1="220" x2="210" y1="16" y2="16"></line>
+<line stroke="#4cd7f6" stroke-width="1.5" x1="220" x2="210" y1="168" y2="168"></line>
+<!-- Labeled P-Q-R-S-T Markers -->
+<!-- P wave -->
+<circle cx="160" cy="99" fill="#acedff" r="2.5"></circle>
+<text fill="#acedff" font-family="JetBrains Mono" font-size="8" font-weight="600" text-anchor="middle" x="160" y="88">P</text>
+<!-- R Peak with Calibrated Amplitude -->
+<circle cx="184" cy="26" fill="#ffffff" filter="url(#glow)" r="3"></circle>
+<text fill="#6ff6ff" font-family="JetBrains Mono" font-size="9" font-weight="700" text-anchor="middle" x="184" y="14">R +0.92mV</text>
+<!-- T wave -->
+<circle cx="222" cy="96" fill="#acedff" r="2.5"></circle>
+<text fill="#acedff" font-family="JetBrains Mono" font-size="8" font-weight="600" text-anchor="middle" x="222" y="85">T</text>
+</svg>
+<!-- Live Sweeper Head Beam -->
+<div class="absolute top-0 bottom-0 w-1 bg-gradient-to-b from-transparent via-primary to-transparent opacity-75 shadow-[0_0_10px_#00f2fe] animate-pulse" id="sweeper-bar" style="left: 80%;"></div>
+<!-- Real-time HUD Diagnostics Overlay -->
+<div class="absolute bottom-2 left-2 flex items-center gap-1.5 px-2 py-0.5 rounded bg-surface-container-high/80 backdrop-blur-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-ping"></span>
+<span class="font-label-micro text-label-micro text-primary">WINDOW: 80 SAMPLES</span>
+</div>
+<div class="absolute top-2 right-2 flex items-center gap-1 px-1.5 py-0.5 rounded bg-surface-container-high/80">
+<span class="font-label-micro text-label-micro text-on-surface-variant">INFERENCE:</span>
+<span class="font-label-telemetry-sm text-label-telemetry-sm text-tertiary-container">0.49ms</span>
+</div>
+</div>
+<!-- Live Hardware Stream Controls -->
+<div class="grid grid-cols-3 gap-1 p-space-sm bg-surface-container-low">
+<button class="flex items-center justify-center gap-1 py-2 px-space-xs rounded bg-surface-container-high hover:bg-surface-bright active:scale-95 transition-all text-on-surface" id="btn-pause">
+<span class="material-symbols-outlined text-[16px] text-secondary" id="pause-icon">pause</span>
+<span class="font-label-telemetry-sm text-label-telemetry-sm font-semibold" id="pause-label">Pause</span>
+</button>
+<button class="flex items-center justify-center gap-1 py-2 px-space-xs rounded bg-error-container hover:opacity-90 active:scale-95 transition-all text-on-error-container" id="btn-inject">
+<span class="material-symbols-outlined text-[16px]">bolt</span>
+<span class="font-label-telemetry-sm text-label-telemetry-sm font-semibold truncate">Inject PVC</span>
+</button>
+<button class="flex items-center justify-center gap-1 py-2 px-space-xs rounded bg-surface-container-high hover:bg-surface-bright active:scale-95 transition-all text-on-surface" id="btn-reset">
+<span class="material-symbols-outlined text-[16px] text-primary-fixed-dim">restart_alt</span>
+<span class="font-label-telemetry-sm text-label-telemetry-sm font-semibold">Reset</span>
+</button>
+</div>
+</div>
+<!-- Current Beat Edge Inference Breakdown -->
+<div class="flex flex-col p-space-sm rounded bg-surface-container-low gap-space-xs">
+<div class="flex items-center justify-between pb-1 border-b-0">
+<span class="font-label-telemetry-sm text-label-telemetry-sm text-on-surface-variant uppercase tracking-wider">Current Beat Telemetry</span>
+<span class="px-2 py-0.5 rounded bg-tertiary-fixed-dim/20 text-tertiary font-label-micro text-label-micro font-bold" id="badge-alert-state">STATE: NORMAL</span>
+</div>
+<div class="grid grid-cols-2 gap-space-xs pt-1">
+<div class="flex flex-col p-space-xs rounded bg-surface-container">
+<span class="font-label-micro text-label-micro text-on-surface-variant">PREDICTED CLASS</span>
+<span class="font-label-telemetry-md text-label-telemetry-md text-primary font-bold" id="beat-class-full">N — Normal</span>
+<span class="font-label-micro text-label-micro text-tertiary" id="beat-conf-pct">Confidence: 98.4%</span>
+</div>
+<div class="flex flex-col p-space-xs rounded bg-surface-container">
+<span class="font-label-micro text-label-micro text-on-surface-variant">R-R INTERVAL</span>
+<span class="font-label-telemetry-md text-label-telemetry-md text-secondary-fixed font-bold">833 ms</span>
+<span class="font-label-micro text-label-micro text-on-surface-variant">Heart Rate: 72 BPM</span>
+</div>
+<div class="flex flex-col p-space-xs rounded bg-surface-container">
+<span class="font-label-micro text-label-micro text-on-surface-variant">BEAT TIMESTAMP</span>
+<span class="font-label-telemetry-sm text-label-telemetry-sm text-on-surface" id="beat-timestamp">12:44:18.420</span>
+<span class="font-label-micro text-label-micro text-outline">Lead Synchronization OK</span>
+</div>
+<div class="flex flex-col p-space-xs rounded bg-surface-container">
+<span class="font-label-micro text-label-micro text-on-surface-variant">VENTRICULAR PROB</span>
+<span class="font-label-telemetry-sm text-label-telemetry-sm text-tertiary-fixed font-bold" id="pvc-prob">0.012 (Nominal)</span>
+<span class="font-label-micro text-label-micro text-outline">Softmax Threshold: 0.85</span>
+</div>
+</div>
+</div>
+<!-- Recent Beats Micro-Log -->
+<div class="flex flex-col rounded bg-surface-container-low overflow-hidden">
+<div class="flex items-center justify-between px-space-sm py-2 bg-surface-container">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-primary">history</span>
+<span class="font-label-telemetry-sm text-label-telemetry-sm text-primary uppercase">Recent Beat Sequence</span>
+</div>
+<span class="font-label-micro text-label-micro text-outline">Inference Log</span>
+</div>
+<div class="flex flex-col gap-1 p-space-xs">
+<!-- Beat Row #99 -->
+<div class="flex items-center justify-between p-space-xs rounded bg-surface-container-high/60">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="font-label-micro text-label-micro text-outline">12:44:18</span>
+<span class="font-label-telemetry-sm text-label-telemetry-sm text-primary font-semibold">#99</span>
+<div class="flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-container"></span>
+<span class="font-label-telemetry-sm text-label-telemetry-sm text-on-surface">N</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs shrink-0">
+<span class="font-label-micro text-label-micro text-tertiary">98.4%</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-lowest font-label-micro text-label-micro text-tertiary">Normal</span>
+<span class="font-label-micro text-label-micro text-on-surface-variant">0.49ms</span>
+</div>
+</div>
+<!-- Beat Row #98 -->
+<div class="flex items-center justify-between p-space-xs rounded bg-surface-container-high/30">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="font-label-micro text-label-micro text-outline">12:44:17</span>
+<span class="font-label-telemetry-sm text-label-telemetry-sm text-primary font-semibold">#98</span>
+<div class="flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-container"></span>
+<span class="font-label-telemetry-sm text-label-telemetry-sm text-on-surface">N</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs shrink-0">
+<span class="font-label-micro text-label-micro text-tertiary">97.9%</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-lowest font-label-micro text-label-micro text-tertiary">Normal</span>
+<span class="font-label-micro text-label-micro text-on-surface-variant">0.51ms</span>
+</div>
+</div>
+<!-- Beat Row #97 (PVC Alert) -->
+<div class="flex items-center justify-between p-space-xs rounded bg-error-container/20">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="font-label-micro text-label-micro text-outline">12:44:16</span>
+<span class="font-label-telemetry-sm text-label-telemetry-sm text-error font-bold">#97</span>
+<div class="flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-error animate-ping"></span>
+<span class="font-label-telemetry-sm text-label-telemetry-sm text-error font-bold">V (PVC)</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs shrink-0">
+<span class="font-label-micro text-label-micro text-error font-semibold">89.2%</span>
+<span class="px-1.5 py-0.5 rounded bg-error font-label-micro text-label-micro text-on-error font-bold uppercase">CRITICAL</span>
+<span class="font-label-micro text-label-micro text-error">0.52ms</span>
+</div>
+</div>
+<!-- Beat Row #96 -->
+<div class="flex items-center justify-between p-space-xs rounded bg-surface-container-high/30">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="font-label-micro text-label-micro text-outline">12:44:15</span>
+<span class="font-label-telemetry-sm text-label-telemetry-sm text-primary font-semibold">#96</span>
+<div class="flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-container"></span>
+<span class="font-label-telemetry-sm text-label-telemetry-sm text-on-surface">N</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs shrink-0">
+<span class="font-label-micro text-label-micro text-tertiary">99.1%</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-lowest font-label-micro text-label-micro text-tertiary">Normal</span>
+<span class="font-label-micro text-label-micro text-on-surface-variant">0.50ms</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Mandatory Clinical Prototype Disclaimer Banner -->
+<div class="flex items-start gap-space-sm p-space-sm rounded bg-surface-container-low mb-2">
+<span class="material-symbols-outlined text-outline text-[18px] shrink-0 mt-0.5">info</span>
+<p class="font-label-micro text-label-micro text-outline leading-tight">
+      Research prototype — not intended for medical diagnosis. All inference decisions are computed via on-device TFLite FP16 edge models for demonstration and evaluation purposes only.
+    </p>
+</div>
+</div>
+<script>
+  (function() {
+    let isPaused = false;
+    let injected = false;
+    const btnPause = document.getElementById('btn-pause');
+    const pauseLabel = document.getElementById('pause-label');
+    const pauseIcon = document.getElementById('pause-icon');
+    const btnInject = document.getElementById('btn-inject');
+    const btnReset = document.getElementById('btn-reset');
+    const sweeper = document.getElementById('sweeper-bar');
+    const ecgPath = document.getElementById('ecg-path');
+    const bpmVal = document.getElementById('bpm-val');
+    const predClassVal = document.getElementById('pred-class-val');
+    const predConfVal = document.getElementById('pred-conf-val');
+    const beatClassFull = document.getElementById('beat-class-full');
+    const beatConfPct = document.getElementById('beat-conf-pct');
+    const pvcProb = document.getElementById('pvc-prob');
+    const badgeAlertState = document.getElementById('badge-alert-state');
+    const beatTimestamp = document.getElementById('beat-timestamp');
+
+    const normalD = "M 0 108 L 25 108 Q 32 108 36 102 Q 40 96 44 108 L 52 108 L 57 114 L 64 26 L 71 138 L 76 108 L 84 108 Q 94 108 102 96 Q 110 84 120 108 L 145 108 Q 152 108 156 102 Q 160 96 164 108 L 172 108 L 177 114 L 184 26 L 191 138 L 196 108 L 204 108 Q 214 108 222 96 Q 230 84 240 108 L 265 108 Q 272 108 276 102 Q 280 96 284 108 L 292 108 L 297 114 L 304 26 L 311 138 L 316 108 L 324 108 Q 334 108 342 96 Q 350 84 360 108 L 380 108";
+    
+    // Distorted PVC waveform shape with inverted wide QRS
+    const pvcD = "M 0 108 L 25 108 Q 32 108 36 102 Q 40 96 44 108 L 52 108 L 57 114 L 64 26 L 71 138 L 76 108 L 84 108 Q 94 108 102 96 Q 110 84 120 108 L 138 108 Q 146 112 152 148 L 172 170 L 190 20 L 210 155 Q 220 108 238 108 L 265 108 Q 272 108 276 102 Q 280 96 284 108 L 292 108 L 297 114 L 304 26 L 311 138 L 316 108 L 324 108 Q 334 108 342 96 Q 350 84 360 108 L 380 108";
+
+    btnPause.addEventListener('click', function() {
+      isPaused = !isPaused;
+      if (isPaused) {
+        pauseLabel.textContent = "Resume";
+        pauseIcon.textContent = "play_arrow";
+        sweeper.classList.remove('animate-pulse');
+        sweeper.style.opacity = '0.2';
+      } else {
+        pauseLabel.textContent = "Pause";
+        pauseIcon.textContent = "pause";
+        sweeper.classList.add('animate-pulse');
+        sweeper.style.opacity = '0.75';
+      }
+    });
+
+    btnInject.addEventListener('click', function() {
+      injected = true;
+      ecgPath.setAttribute('d', pvcD);
+      ecgPath.setAttribute('stroke', '#ffb4ab');
+      ecgPath.setAttribute('filter', 'url(#alertGlow)');
+      
+      bpmVal.textContent = "118";
+      predClassVal.textContent = "V";
+      predClassVal.className = "font-headline-xl-mobile text-headline-xl-mobile text-error font-bold";
+      predConfVal.textContent = "94.8%";
+      predConfVal.className = "font-label-telemetry-md text-label-telemetry-md text-error";
+
+      beatClassFull.textContent = "V — PVC (Ventricular)";
+      beatClassFull.className = "font-label-telemetry-md text-label-telemetry-md text-error font-bold";
+      beatConfPct.textContent = "Confidence: 94.8%";
+      beatConfPct.className = "font-label-micro text-label-micro text-error";
+
+      pvcProb.textContent = "0.948 (CRITICAL)";
+      pvcProb.className = "font-label-telemetry-sm text-label-telemetry-sm text-error font-bold";
+
+      badgeAlertState.textContent = "STATE: PVC EVENT";
+      badgeAlertState.className = "px-2 py-0.5 rounded bg-error text-on-error font-label-micro text-label-micro font-bold animate-pulse";
+
+      const now = new Date();
+      beatTimestamp.textContent = now.toTimeString().split(' ')[0] + '.' + String(now.getMilliseconds()).padStart(3, '0');
+    });
+
+    btnReset.addEventListener('click', function() {
+      injected = false;
+      ecgPath.setAttribute('d', normalD);
+      ecgPath.setAttribute('stroke', '#00f2fe');
+      ecgPath.setAttribute('filter', 'url(#glow)');
+
+      bpmVal.textContent = "72";
+      predClassVal.textContent = "N";
+      predClassVal.className = "font-headline-xl-mobile text-headline-xl-mobile text-primary-container font-bold";
+      predConfVal.textContent = "98.4%";
+      predConfVal.className = "font-label-telemetry-md text-label-telemetry-md text-tertiary-fixed";
+
+      beatClassFull.textContent = "N — Normal";
+      beatClassFull.className = "font-label-telemetry-md text-label-telemetry-md text-primary font-bold";
+      beatConfPct.textContent = "Confidence: 98.4%";
+      beatConfPct.className = "font-label-micro text-label-micro text-tertiary";
+
+      pvcProb.textContent = "0.012 (Nominal)";
+      pvcProb.className = "font-label-telemetry-sm text-label-telemetry-sm text-tertiary-fixed font-bold";
+
+      badgeAlertState.textContent = "STATE: NORMAL";
+      badgeAlertState.className = "px-2 py-0.5 rounded bg-tertiary-fixed-dim/20 text-tertiary font-label-micro text-label-micro font-bold";
+      beatTimestamp.textContent = "12:44:18.420";
+    });
+
+    // Subtle sweeper translation animation
+    let pos = 0;
+    setInterval(function() {
+      if (!isPaused) {
+        pos = (pos + 1.8) % 100;
+        sweeper.style.left = pos + '%';
+      }
+    }, 40);
+  })();
+</script></main><div class="fixed bottom-16 inset-x-0 z-40 bg-surface-container-lowest/95 backdrop-blur-md px-space-md py-1 flex items-center justify-center"><p class="font-label-micro text-label-micro text-outline text-center truncate">Research prototype. Not a medical device. Predictions are for demonstration only.</p></div><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface-container-low/95 backdrop-blur-xl shadow-[0_-1px_8px_rgba(0,0,0,0.5)]" data-active-classes="text-primary-container font-semibold"><div class="flex justify-around items-center h-16 px-space-xs"><a aria-current="page" class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] h-12 transition-colors text-primary-container font-semibold" data-path="overview" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span class="font-label-micro text-label-micro">Overview</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] h-12 text-on-surface-variant transition-colors" data-path="live-ecg" href="#"><span class="material-symbols-outlined text-[20px]">ecg_heart</span><span class="font-label-micro text-label-micro">Live ECG</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] h-12 text-on-surface-variant transition-colors" data-path="arrhythmia" href="#"><span class="material-symbols-outlined text-[20px]">psychology</span><span class="font-label-micro text-label-micro">Arrhythmia</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] h-12 text-on-surface-variant transition-colors" data-path="edge-tflite" href="#"><span class="material-symbols-outlined text-[20px]">memory</span><span class="font-label-micro text-label-micro">Edge TFLite</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] h-12 text-on-surface-variant transition-colors" data-path="alerts" href="#"><span class="material-symbols-outlined text-[20px]">warning</span><span class="font-label-micro text-label-micro">Alerts</span></a></div></nav></body></html>

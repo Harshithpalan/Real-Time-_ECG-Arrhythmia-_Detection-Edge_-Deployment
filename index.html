@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECG Edge Monitor - Project Index</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #0B0F19;
+            color: #dfe2f1;
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            color: #00F2FE;
+            text-shadow: 0 0 12px rgba(0, 242, 254, 0.35);
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            width: 100%;
+            max-width: 1000px;
+        }
+        .card {
+            background-color: #111827;
+            border: 1px solid rgba(6, 182, 212, 0.14);
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            text-decoration: none;
+            color: #dfe2f1;
+            transition: all 0.2s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        .card:hover {
+            border-color: rgba(0, 242, 254, 0.5);
+            background-color: rgba(30, 41, 59, 0.75);
+            box-shadow: 0 0 16px rgba(0, 242, 254, 0.15);
+            transform: scale(0.98);
+        }
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #00F2FE;
+        }
+        .card-desc {
+            font-size: 0.875rem;
+            color: #94A3B8;
+        }
+        .card-path {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            color: #10B981;
+            margin-top: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>ECG Edge Monitor Views</h1>
+
+    <div class="container">
+        <a href="arrhythmia_analysis/code.html" class="card">
+            <div class="card-title">Arrhythmia Analysis</div>
+            <div class="card-desc">Detailed view for analyzing arrhythmias.</div>
+            <div class="card-path">/arrhythmia_analysis/code.html</div>
+        </a>
+
+        <a href="ecg_edge_monitor/code.html" class="card">
+            <div class="card-title">ECG Edge Monitor</div>
+            <div class="card-desc">The primary ECG edge monitor interface.</div>
+            <div class="card-path">/ecg_edge_monitor/code.html</div>
+        </a>
+
+        <a href="live_ecg_monitor/code.html" class="card">
+            <div class="card-title">Live ECG Monitor</div>
+            <div class="card-desc">Dashboard for real-time live ECG monitoring.</div>
+            <div class="card-path">/live_ecg_monitor/code.html</div>
+        </a>
+
+        <a href="overview_dashboard/code.html" class="card">
+            <div class="card-title">Overview Dashboard</div>
+            <div class="card-desc">High-level dashboard overview of patient telemetry.</div>
+            <div class="card-path">/overview_dashboard/code.html</div>
+        </a>
+
+        <a href="ecg_edge_logo/code.html" class="card">
+            <div class="card-title">ECG Edge Logo</div>
+            <div class="card-desc">The application logo component.</div>
+            <div class="card-path">/ecg_edge_logo/code.html</div>
+        </a>
+    </div>
+
+</body>
+</html>
